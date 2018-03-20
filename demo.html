@@ -1,0 +1,277 @@
+<html>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!-- JQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+   $('.collapsible').collapsible();
+ });
+
+ $(document).ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+
+  $(document).ready(function(){
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+
+  $('#modal1').modal('open');
+  $('#modal1').modal('close');
+  $('#modal2').modal('open');
+  $('#modal2').modal('close');
+  $('#modal3').modal('open');
+  $('#modal3').modal('close');
+
+  $('#modal11').modal('open');
+  $('#modal11').modal('close');
+  $('#modal22').modal('open');
+  $('#modal22').modal('close');
+  $('#modal33').modal('open');
+  $('#modal33').modal('close');
+
+
+ </script>
+
+<head>
+  <title> Demo </title>
+</head>
+
+<body>
+  <div class="container">
+    <div class = "row">
+      <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">A</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+              <br><br>
+              <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">A1</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+                  <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header">A1</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header">A2</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header">A3</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+              </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">A2</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">A3</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">B</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+        <br><br>
+        <ul class="tabs">
+           <li class="tab col s3"><a href="#test1">B1</a></li>
+           <li class="tab col s3"><a href="#test2">B2</a></li>
+           <li class="tab col s3"><a href="#test3">B3</a></li>
+           <li class="tab col s3"><a href="#test4">B4</a></li>
+        </ul>
+        <div id="test1" class="col s12">Lorem ipsum dolor sit amet. - B1</div>
+        <div id="test2" class="col s12">Lorem ipsum dolor sit amet. - B2</div>
+        <div id="test3" class="col s12">Lorem ipsum dolor sit amet. - B3</div>
+        <div id="test4" class="col s12">Lorem ipsum dolor sit amet. - B4</div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">C</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+        <br><br>
+
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">C1</a>
+        &nbsp;&nbsp;&nbsp;
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal2">C2</a>
+        &nbsp;&nbsp;&nbsp;
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal3">C3</a>
+        &nbsp;&nbsp;&nbsp;
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>C1</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <h4>C2</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <h4>C3</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">D</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+      <br><br>
+            <div class="card white">
+              <div class="card-content black-text">
+                <span class="card-title">D1</span>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="card white">
+              <div class="card-content black-text">
+                <span class="card-title">D2</span>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="card white">
+              <div class="card-content black-text">
+                <span class="card-title">D3</span>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">E</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+      <br><br>
+            <div class="card white">
+              <div class="card-content black-text">
+                <span class="card-title">E1</span>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-action">
+              <a class = "modal-trigger" href="#modal11">E11</a>
+              <a class = "modal-trigger" href="#modal11">E12</a>
+            </div>
+            <div id="modal11" class="modal">
+              <div class="modal-content">
+                <h4>E1</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+              </div>
+            </div>
+            </div>
+            <div class="card white">
+              <div class="card-content black-text">
+                <span class="card-title">E2</span>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-action">
+              <a class = "modal-trigger" href="#modal22">E21</a>
+              <a class = "modal-trigger" href="#modal22">E22</a>
+            </div>
+            </div>
+            <div class="card white">
+              <div class="card-content black-text">
+                <span class="card-title">E3</span>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-action">
+              <a class = "modal-trigger" href="#modal33">E31</a>
+              <a class = "modal-trigger" href="#modal33">E32</a>
+            </div>
+          </div>
+
+          <div id="modal11" class="modal">
+            <div class="modal-content">
+              <h4>E11</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+          </div>
+
+          <div id="modal22" class="modal">
+            <div class="modal-content">
+              <h4>E22</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+          </div>
+
+          <div id="modal33" class="modal">
+            <div class="modal-content">
+              <h4>E33</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+          </div>
+
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">F</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+      <br><br>
+      <a class="waves-effect waves-light btn" onclick="myFunction(1)">F1</a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="waves-effect waves-light btn indigo darken-4" onclick="myFunction(2)">F2</a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="waves-effect waves-light btn" onclick="myFunction(3)">F3</a>
+      &nbsp;&nbsp;&nbsp;
+
+      <script>
+      function myFunction(y) {
+      var x = document.getElementById("sampleText");
+      console.log(y);
+      if (y==1)
+        x.innerHTML = "Lorem ipsum dolor sit amet. - F1";
+      else if (y==2)
+        x.innerHTML = "Lorem ipsum dolor sit amet. - F2";
+      else {
+        x.innerHTML = "Lorem ipsum dolor sit amet. - F3";
+      }
+    }
+    </script>
+
+      <p id = "sampleText"></p>
+</div>
+    </li>
+  </ul>
+</div>
+</div>
+</body>
+
+</html>

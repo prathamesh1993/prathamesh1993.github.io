@@ -1,0 +1,87 @@
+<html>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!-- JQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<head>
+  <title> Demo 3 </title>
+</head>
+
+<script>
+$(document).ready(function(){
+   $('.collapsible').collapsible();
+ });
+ </script>
+
+<body>
+  <div class="container">
+    <div class = "row">
+
+      <h3> Septic Transfusion Reaction </h3>
+
+      <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">Sepsis</div>
+            <div class="collapsible-body">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header">Has Fever</div>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li> Day 1 - 102 </li>
+                      <li> Day 2 - 103 </li>
+                      <li> Day 3 - 102 </li>
+                      <li> Day 4 - 103 </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="collapsible-header">Has Rigors OR Has Dyspnea OR Has Vomiting OR Has Nausea OR Has Shock OR Has Hypotension OR Has Tachycardia</div>
+                  <div class="collapsible-body">
+                    <div class="card white">
+                      <div class="card-content black-text">
+                        <span class="card-title">Has Rigors</span>
+                        <p>
+                          <ul>
+                            <li> Day 1 - hen starts to have rigor like tremors and becomes very rigid </li>
+                            <br>
+                            <li> Day 2 - pt then starts to have rigor like tremors and becomes very rigid with increase in icp to 30's. icp </li>
+                            <br>
+                            <li> Day 3 - drops only when pt resedated. pt also starts to rigor when stimulateed for any prolonged lenght of toime. such as log rolling or bathing </li>
+                            <br>
+                            <li> Day 4 - Pt continues to rigor, tmax 101, has not defervessed despite Tylenol. Have held off on tx of PLT w/fever and rigors. Cont on IV antbx as </li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card white">
+                      <div class="card-content black-text">
+                        <span class="card-title">Has Vomitting</span>
+                        <p>
+                          <ul>
+                            <li> Day 1 - For vomiting: a. eter/prior bladder rupture admitted with acute onset nausea, vomiting. </li>
+                            <br>
+                            <li> Day 2 - Concern for aspiration event while vomiting. If there is consistent concern regarding vomiting, a gastrointestinal study or ultrasound may be helpful. </li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">Sepsis Event Time - Transfusion Event Time</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+      </ul>
+
+    </div>
+  </div>
+</body>
+</html>
