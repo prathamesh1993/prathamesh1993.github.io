@@ -17,15 +17,18 @@ var x = document.getElementById("sampleText");
 console.log(y);
 if (y==1) {
   //x.innerHTML = "Temperature values <br><br> <ul><li>Day 1 - 102</li><br><li>Day 2-103<br></li><br><li>Day 3-101</li></ul>";
-  x.innerHTML = '<div class="card white"> <div class="card-content black-text"> <span class="card-title">Has Fever</span> <p> <ul> <li> Day 1 - 102 </li> <br> <li> Day 2-103 </li> </ul> </p> </div> </div>';
+  x.innerHTML = '<div class="card white"> <div class="card-content black-text"> <span class="card-title">Temperature</span> <p> <ul> <li> Day 1 - 102 </li> <br> <li> Day 2-103 </li> </ul> </p> </div> </div><br><br><div class="card white"> <div class="card-content black-text"> <span class="card-title">Fever Mention</span> <p> Patient X has a fever. </p> </div> </div>';
   //document.getElementById("btn1").style.display='block';
   //document.getElementById("btn2").style.display='block';
   document.getElementById("hidbuttons").style.display='block';
 }
 else if (y==2)
   x.innerHTML = "<div class='card white'><div class='card-content black-text'><span class='card-title'>Has Rigors</span><p><ul><li> Day 1 - hen starts to have rigor like tremors and becomes very rigid </li><br><li> Day 2 - pt then starts to have rigor like tremors and becomes very rigid with increase in icp to 30's. icp </li><br><li> Day 3 - drops only when pt resedated. pt also starts to rigor when stimulateed for any prolonged lenght of toime. such as log rolling or bathing </li><br><li> Day4- Pt continues to rigor, tmax 101, has not defervessed despite Tylenol. Have held off on tx of PLT w/fever and rigors. Cont on IV antbx as </li></ul></p></div></div>";
-else {
+else if (y==3) {
   x.innerHTML = '<div class="card white"><div class="card-content black-text"><span class="card-title">Has Vomitting</span><p><ul><li> Day 1 - For vomiting: a. eter/prior bladder rupture admitted with acute onset nausea, vomiting. </li><br><li> Day 2 - Concern for aspiration event while vomiting. If there is consistent concern regarding vomiting, a gastrointestinal study or ultrasound may be helpful. </li></ul></p></div></div>';
+}
+else {
+  x.innerHTML = '<div class="card white"> <div class="card-content black-text"> <span class="card-title">Fever Mention</span> <p> Patient X has a fever. </p> </div> </div>';
 }
 }
 </script>
@@ -41,12 +44,16 @@ else {
             <li>
               <div class="collapsible-header">Sepsis</div>
               <div class="collapsible-body">
-                <a class="waves-effect waves-light btn red darken-4" onclick="myFunction(1)">Has Fever</a>
+                <p>
+                  <b>Query rule:</b> <br><br>
+                  Has Fever AND (Has Rigors or Has Vomitting or Has Shock)
+                </p>
+                <a class="waves-effect waves-light btn indigo darken-4" onclick="myFunction(1)">Has Fever</a>
                 <br><br>
                 <div id="hidbuttons" style="display: none;">
-                  <a  id = "btn1" class="waves-effect waves-light btn">Fever-2</a>
+                  <a  id = "btn1" class="waves-effect waves-light btn" onclick="myFunction(4)">Fever Mention</a>
                   <br> <br>
-                  <a id = "btn2" class="waves-effect waves-light btn">Fever-3</a>
+                  <a id = "btn2" class="waves-effect waves-light btn">Temperature</a>
                   <br><br>
                 </div>
                 <a class="waves-effect waves-light btn indigo darken-4" onclick="myFunction(2)">Has Rigors</a>
